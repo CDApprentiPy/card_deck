@@ -5,8 +5,13 @@ namespace card_deck{
     public class Player
     {
         public string name;
-        public List<Card> hand;
+        private List<Card> hand;
 
+        public Player(string n)
+        {
+            hand = new List<Card>();
+            name = n;
+        }
         public Card Draw(Deck deck)
         {
             Card c = deck.Deal();
